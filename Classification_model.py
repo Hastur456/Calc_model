@@ -4,20 +4,6 @@ from keras.api.initializers import glorot_uniform
 from keras.api.optimizers import Adam
 from keras.api.regularizers import l2
 
-# def get_classification_model(im_size):
-#     model = Sequential([
-#         Conv2D(32, (2, 2), activation="relu", input_shape=(im_size, im_size, 3)),
-#         MaxPooling2D(2, 2),
-#
-#         Flatten(),
-#         Dense(128, activation="relu"),
-#         Dense(15, activation="softmax")
-#     ])
-#
-#     model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-#
-#     return model
-
 
 def get_classification_model(input_shape=(45, 45, 1)):
     regularizer = l2(0.01)
